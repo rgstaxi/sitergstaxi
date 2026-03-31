@@ -627,14 +627,24 @@
       gap: 12px;
     }
 
-    .success-box {
+    .success-box,
+    .error-box {
       display: none;
       padding: 14px 16px;
       border-radius: 16px;
+      font-weight: 600;
+    }
+
+    .success-box {
       border: 1px solid rgba(34,197,94,.24);
       background: rgba(34,197,94,.12);
       color: #dcfce7;
-      font-weight: 600;
+    }
+
+    .error-box {
+      border: 1px solid rgba(239,68,68,.24);
+      background: rgba(239,68,68,.12);
+      color: #fee2e2;
     }
 
     footer {
@@ -807,6 +817,8 @@
     "description": "RGS Taxi assure le transport de personnes pour particuliers et professionnels à Savigny-sur-Orge et dans toute l’Île-de-France : gares, aéroports, hôpitaux, colis, plis et toutes distances."
   }
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
   <header>
@@ -1057,20 +1069,15 @@
             <li><strong>Activité :</strong> transport de personnes, plis, colis et trajets toute distance</li>
           </ul>
 
-          <form class="contact-form" id="contactForm" action="https://formsubmit.co/rgstaxi91@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Nouvelle demande depuis le site RGS Taxi" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://rgstaxi.github.io/sitergstaxi/" />
-
+          <form class="contact-form" id="contactForm">
             <div class="form-grid">
               <div class="field">
                 <label for="name">Nom</label>
-                <input id="name" name="Nom" type="text" placeholder="Votre nom" required />
+                <input id="name" name="name" type="text" placeholder="Votre nom" required />
               </div>
               <div class="field">
                 <label for="phone">Téléphone</label>
-                <input id="phone" name="Téléphone" type="tel" placeholder="06 00 00 00 00" required />
+                <input id="phone" name="phone" type="tel" placeholder="06 00 00 00 00" required />
               </div>
             </div>
 
@@ -1082,41 +1089,40 @@
             <div class="form-grid">
               <div class="field">
                 <label for="pickup">Adresse de départ</label>
-                <input id="pickup" name="Départ" type="text" placeholder="Adresse de départ" required />
+                <input id="pickup" name="pickup" type="text" placeholder="Adresse de départ" required />
               </div>
               <div class="field">
                 <label for="destination">Destination</label>
-                <input id="destination" name="Destination" type="text" placeholder="Adresse d’arrivée" required />
+                <input id="destination" name="destination" type="text" placeholder="Adresse d’arrivée" required />
               </div>
             </div>
 
             <div class="form-grid">
               <div class="field">
                 <label for="date">Date</label>
-                <input id="date" name="Date" type="date" />
+                <input id="date" name="date" type="date" />
               </div>
               <div class="field">
                 <label for="time">Heure</label>
-                <input id="time" name="Heure" type="time" />
+                <input id="time" name="time" type="time" />
               </div>
             </div>
 
             <div class="field">
               <label for="message">Message</label>
-              <textarea id="message" name="Message" placeholder="Nombre de passagers, bagages, demande particulière..."></textarea>
+              <textarea id="message" name="message" placeholder="Nombre de passagers, bagages, demande particulière..."></textarea>
             </div>
-
-            <input type="hidden" name="_replyto" value="%email%" />
 
             <p class="form-note">Pour une réponse immédiate, le plus rapide reste l’appel ou WhatsApp.</p>
 
             <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+              <button class="btn btn-primary" id="submitBtn" type="submit">Envoyer la demande</button>
               <a class="btn btn-secondary" href="tel:+33633339423">Appeler</a>
               <a class="btn btn-whatsapp" href="https://wa.me/33633339423?text=Bonjour%20RGS%20Taxi%2C%20je%20souhaite%20r%C3%A9server%20une%20course." target="_blank" rel="noopener">WhatsApp</a>
             </div>
 
-            <div class="success-box" id="successBox">Votre demande est en cours d’envoi. Lors du premier test, pense à valider l’adresse email FormSubmit sur rgstaxi91@gmail.com.</div>
+            <div class="success-box" id="successBox">Votre demande a bien été envoyée.</div>
+            <div class="error-box" id="errorBox">Erreur lors de l’envoi. Vérifie la configuration EmailJS puis réessaie.</div>
           </form>
         </article>
 
@@ -1234,11 +1240,39 @@
     })();
 
     (function () {
+      emailjs.init({
+        publicKey: 'YOUR_PUBLIC_KEY'
+      });
+
       const form = document.getElementById('contactForm');
       const successBox = document.getElementById('successBox');
-      if (!form || !successBox) return;
-      form.addEventListener('submit', function () {
-        successBox.style.display = 'block';
+      const errorBox = document.getElementById('errorBox');
+      const submitBtn = document.getElementById('submitBtn');
+
+      if (!form || !successBox || !errorBox || !submitBtn) return;
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        successBox.style.display = 'none';
+        errorBox.style.display = 'none';
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+
+        emailjs.sendForm(
+          'YOUR_SERVICE_ID',
+          'YOUR_TEMPLATE_ID',
+          form
+        ).then(function () {
+          successBox.style.display = 'block';
+          form.reset();
+        }).catch(function (error) {
+          console.error('EmailJS error:', error);
+          errorBox.style.display = 'block';
+        }).finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Envoyer la demande';
+        });
       });
     })();
   </script>
