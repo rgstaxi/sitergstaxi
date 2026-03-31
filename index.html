@@ -1061,6 +1061,7 @@
             <input type="hidden" name="_subject" value="Nouvelle demande depuis le site RGS Taxi" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://rgstaxi.github.io/sitergstaxi/" />
 
             <div class="form-grid">
               <div class="field">
@@ -1071,6 +1072,11 @@
                 <label for="phone">Téléphone</label>
                 <input id="phone" name="Téléphone" type="tel" placeholder="06 00 00 00 00" required />
               </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Votre adresse email" required />
             </div>
 
             <div class="form-grid">
@@ -1100,6 +1106,8 @@
               <textarea id="message" name="Message" placeholder="Nombre de passagers, bagages, demande particulière..."></textarea>
             </div>
 
+            <input type="hidden" name="_replyto" value="%email%" />
+
             <p class="form-note">Pour une réponse immédiate, le plus rapide reste l’appel ou WhatsApp.</p>
 
             <div class="form-actions">
@@ -1108,7 +1116,7 @@
               <a class="btn btn-whatsapp" href="https://wa.me/33633339423?text=Bonjour%20RGS%20Taxi%2C%20je%20souhaite%20r%C3%A9server%20une%20course." target="_blank" rel="noopener">WhatsApp</a>
             </div>
 
-            <div class="success-box" id="successBox">Votre demande est en cours d’envoi. Pense à valider l’adresse email FormSubmit lors du premier test.</div>
+            <div class="success-box" id="successBox">Votre demande est en cours d’envoi. Lors du premier test, pense à valider l’adresse email FormSubmit sur rgstaxi91@gmail.com.</div>
           </form>
         </article>
 
