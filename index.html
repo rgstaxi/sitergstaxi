@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>RGS Taxi | Taxi à Savigny-sur-Orge, Morangis, Chilly-Mazarin et Île-de-France</title>
+  <meta name="description" content="RGS Taxi à Savigny-sur-Orge et en Île-de-France pour particuliers et professionnels. Gares, aéroports, hôpitaux, colis, plis et toutes distances. Réservation rapide par téléphone ou WhatsApp." />
+  <meta name="keywords" content="taxi Savigny-sur-Orge, taxi Savigny, taxi Morangis, taxi Chilly-Mazarin, taxi Essonne, taxi Île-de-France, taxi Orly, taxi Roissy, taxi gare, taxi hôpital, transport colis, RGS Taxi" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="RGS Taxi" />
+  <meta name="theme-color" content="#0a1220" />
+  <link rel="canonical" href="https://www.rgstaxi.fr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RGS Taxi | Taxi à Savigny-sur-Orge et en Île-de-France" />
+  <meta property="og:description" content="Transport de personnes, aéroports, gares, hôpitaux, plis et colis. Service de taxi fiable à Savigny-sur-Orge, Morangis, Chilly-Mazarin et dans toute l’Île-de-France." />
+  <meta property="og:url" content="https://www.rgstaxi.fr/" />
+  <meta property="og:image" content="https://www.rgstaxi.fr/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RGS Taxi | Taxi Savigny-sur-Orge, Morangis, Chilly-Mazarin" />
+  <meta name="twitter:description" content="Réservation rapide pour vos trajets gares, aéroports, hôpitaux, plis, colis et toutes distances en Île-de-France." />
+
+  <style>
+    :root {
+      --bg: #070d18;
+      --bg-2: #0b1323;
+      --card: rgba(10, 16, 28, 0.82);
+      --card-2: rgba(255,255,255,0.05);
+      --line: rgba(255,255,255,0.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --brand: #f4b544;
+      --brand-2: #f59e0b;
+      --ok: #22c55e;
+      --shadow: 0 24px 70px rgba(0,0,0,.35);
+      --radius: 26px;
+      --container: 1180px;
+      --header-h: 82px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(244,181,68,.18), transparent 26%),
+        radial-gradient(circle at 0% 0%, rgba(255,255,255,.04), transparent 18%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 44%, #050912 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 34px 0 78px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size: .92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 12px 18px;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+      text-align: center;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      color: #111827;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 16px 36px rgba(245,158,11,.22);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,.05);
+      border-color: var(--line);
+    }
+
+    .btn-whatsapp {
+      color: #fff;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      box-shadow: 0 16px 36px rgba(34,197,94,.22);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      min-height: var(--header-h);
+      background: rgba(7, 13, 24, .72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .nav {
+      min-height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      object-fit: contain;
+      background: #fff;
+      padding: 4px;
+      flex: 0 0 auto;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-text {
+      min-width: 0;
+      line-height: 1.08;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: .06em;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: .82rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .header-cta {
+      flex: 0 0 auto;
+    }
+
+    .hero {
+      padding: 52px 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-tags,
+    .hero-links,
+    .cta-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-copy h1 {
+      margin: 18px 0 18px;
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      line-height: .96;
+      letter-spacing: -.04em;
+    }
+
+    .hero-highlight {
+      color: var(--brand);
+      text-shadow: 0 0 28px rgba(244,181,68,.18);
+    }
+
+    .hero-copy p {
+      margin: 0 0 26px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .typewriter {
+      display: block;
+      min-height: 1.2em;
+      margin-top: 6px;
+      color: var(--brand);
+      border-right: 2px solid rgba(244,181,68,.85);
+      white-space: nowrap;
+      overflow: hidden;
+      width: fit-content;
+      max-width: 100%;
+      animation: blink .9s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .panel,
+    .card,
+    .review-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .panel {
+      padding: 26px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(244,181,68,.22), transparent 72%);
+      pointer-events: none;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .stat,
+    .card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+    }
+
+    .stat {
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.03rem;
+    }
+
+    .section-heading {
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 3vw, 3.2rem);
+      line-height: 1.02;
+      letter-spacing: -.03em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid-3,
+    .process,
+    .contact-grid,
+    .areas {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-3,
+    .process {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .areas,
+    .contact-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 24px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .card:hover { transform: translateY(-4px); border-color: rgba(244,181,68,.32); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.12rem;
+    }
+
+    .card p,
+    .card li,
+    .muted,
+    .form-note {
+      color: var(--muted);
+    }
+
+    .area-list {
+      margin: 0;
+      padding-left: 18px;
+      columns: 2;
+      gap: 18px;
+    }
+
+    .review-wrap {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, black 7%, black 93%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 7%, black 93%, transparent);
+    }
+
+    .review-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: scrollReviews 30s linear infinite;
+      padding: 4px 0;
+    }
+
+    .review-wrap:hover .review-track { animation-play-state: paused; }
+
+    @keyframes scrollReviews {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .review-card {
+      width: 340px;
+      padding: 24px;
+      flex: 0 0 auto;
+    }
+
+    .review-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .stars {
+      color: var(--brand);
+      letter-spacing: .12em;
+      white-space: nowrap;
+    }
+
+    .google-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      color: var(--brand);
+      background: rgba(244,181,68,.16);
+      border: 1px solid rgba(244,181,68,.24);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .faq-item details {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px 20px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item details p { margin: 12px 0 0; color: var(--muted); }
+
+    .service-list,
+    .trust-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field label {
+      font-size: .94rem;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      border-radius: 16px;
+      padding: 14px 16px;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder { color: rgba(203,213,225,.72); }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(244,181,68,.45);
+      box-shadow: 0 0 0 4px rgba(244,181,68,.08);
+      background: rgba(255,255,255,.07);
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .map-frame {
+      width: 100%;
+      min-height: 340px;
+      border: 0;
+      border-radius: 24px;
+      display: block;
+      background: rgba(255,255,255,.04);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .success-box {
+      display: none;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(34,197,94,.24);
+      background: rgba(34,197,94,.12);
+      color: #dcfce7;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 24px 0 60px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 22px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      width: 62px;
+      height: 62px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border: 3px solid rgba(255,255,255,.14);
+      box-shadow: 0 20px 40px rgba(34,197,94,.3);
+    }
+
+    .whatsapp-float svg {
+      width: 29px;
+      height: 29px;
+      fill: currentColor;
+    }
+
+    .mobile-cta-bar {
+      display: none;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .grid-3,
+      .process,
+      .areas,
+      .contact-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .area-list { columns: 1; }
+      .hero-grid { gap: 20px; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 767px) {
+      :root { --header-h: 74px; }
+
+      .container { width: min(calc(100% - 20px), var(--container)); }
+      .section { padding: 20px 0 52px; }
+      .nav { gap: 12px; }
+      .brand img { width: 46px; height: 46px; }
+      .brand-text strong { font-size: .94rem; }
+      .brand-text span { font-size: .74rem; }
+      .header-cta .btn { min-height: 46px; padding: 10px 14px; }
+      .hero { padding-top: 30px; }
+      .hero-copy h1 {
+        font-size: clamp(2rem, 10vw, 3.1rem);
+        line-height: .98;
+        margin: 16px 0 14px;
+      }
+      .hero-copy p { font-size: 1rem; margin-bottom: 22px; }
+      .typewriter {
+        white-space: normal;
+        width: 100%;
+        min-height: 2.5em;
+      }
+      .panel,
+      .card,
+      .review-card { padding: 18px; border-radius: 22px; }
+      .stats { grid-template-columns: 1fr; }
+      .pill { font-size: .84rem; padding: 8px 12px; }
+      .cta-inline,
+      .hero-links,
+      .form-actions { display: grid; grid-template-columns: 1fr; }
+      .cta-inline .btn,
+      .hero-links .pill,
+      .form-actions .btn { width: 100%; }
+      .review-wrap {
+        mask-image: none;
+        -webkit-mask-image: none;
+      }
+      .review-card { width: min(300px, calc(100vw - 34px)); }
+      .mobile-cta-bar {
+        position: fixed;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        z-index: 90;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .mobile-cta-bar .btn {
+        min-height: 54px;
+        border-radius: 18px;
+        box-shadow: 0 18px 36px rgba(0,0,0,.28);
+      }
+      .whatsapp-float { display: none; }
+      footer { padding-bottom: 92px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "RGS Taxi",
+    "url": "https://www.rgstaxi.fr/",
+    "logo": "https://www.rgstaxi.fr/logo-rgs-taxi.webp",
+    "telephone": "+33633339423",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "45 Rue des Cailles",
+      "postalCode": "91600",
+      "addressLocality": "Savigny-sur-Orge",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      "Savigny-sur-Orge",
+      "Morangis",
+      "Chilly-Mazarin",
+      "Juvisy-sur-Orge",
+      "Athis-Mons",
+      "Viry-Châtillon",
+      "Essonne",
+      "Île-de-France"
+    ],
+    "serviceType": [
+      "Taxi",
+      "Transport de personnes",
+      "Transfert gare",
+      "Transfert aéroport",
+      "Transport hôpital",
+      "Transport de plis",
+      "Transport de colis"
+    ],
+    "sameAs": [
+      "https://share.google/6giEUYR3tADGOdOhG"
+    ],
+    "description": "RGS Taxi assure le transport de personnes pour particuliers et professionnels à Savigny-sur-Orge et dans toute l’Île-de-France : gares, aéroports, hôpitaux, colis, plis et toutes distances."
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="RGS Taxi accueil">
+        <img src="logo-rgs-taxi.webp" alt="Logo RGS Taxi" />
+        <div class="brand-text">
+          <strong>RGS TAXI</strong>
+          <span>Savigny-sur-Orge • Île-de-France</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#zones">Zones</a>
+        <a href="#reviews">Avis</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="tel:+33633339423">Réserver</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-tags">
+            <span class="pill">Taxi Savigny-sur-Orge</span>
+            <span class="pill">Taxi Morangis</span>
+            <span class="pill">Taxi Chilly-Mazarin</span>
+          </div>
+
+          <h1>
+            Votre <span class="hero-highlight">taxi de confiance</span>
+            <span class="typewriter" id="typewriter" aria-live="polite">à Savigny-sur-Orge</span>
+          </h1>
+
+          <p>
+            RGS Taxi accompagne les <strong>particuliers</strong> et les <strong>professionnels</strong> pour tous types de déplacements : <strong>gares</strong>, <strong>aéroports</strong>, <strong>hôpitaux</strong>, <strong>toutes distances</strong>, ainsi que le <strong>transport de colis et de plis</strong>. Basé à Savigny-sur-Orge, le service intervient rapidement sur Morangis, Chilly-Mazarin, l’Essonne et toute l’Île-de-France.
+          </p>
+
+          <div class="cta-inline">
+            <a class="btn btn-primary" href="tel:+33633339423">Appeler le 06 33 33 94 23</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/33633339423?text=Bonjour%20RGS%20Taxi%2C%20je%20souhaite%20r%C3%A9server%20une%20course." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-secondary" href="https://share.google/6giEUYR3tADGOdOhG" target="_blank" rel="noopener">Voir la fiche Google</a>
+          </div>
+
+          <div class="hero-links" style="margin-top:18px;">
+            <span class="pill">Gares & aéroports</span>
+            <span class="pill">Hôpitaux</span>
+            <span class="pill">Plusieurs véhicules</span>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Informations essentielles">
+          <span class="pill">Réservation rapide • Toute distance</span>
+          <h2 style="margin:16px 0 12px;font-size:2rem;line-height:1.05;">Simple, premium, efficace.</h2>
+          <p class="muted" style="margin:0;">Taxi local idéal pour les transferts vers Orly, Roissy, Massy TGV, les gares parisiennes, les rendez-vous médicaux, les déplacements professionnels et les besoins urgents.</p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Particuliers & pros</strong>
+              <span class="muted">Trajets privés, rendez-vous, entreprises.</span>
+            </div>
+            <div class="stat">
+              <strong>Gares & aéroports</strong>
+              <span class="muted">Orly, Roissy, Massy, Paris.</span>
+            </div>
+            <div class="stat">
+              <strong>Hôpitaux</strong>
+              <span class="muted">Consultations, examens, hospitalisations.</span>
+            </div>
+            <div class="stat">
+              <strong>Colis & plis</strong>
+              <span class="muted">Livraisons urgentes et sécurisées.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Service de taxi complet en Essonne et en Île-de-France</h2>
+          <p>Une page claire, rapide et pensée pour le référencement local sur les recherches les plus utiles : taxi Savigny-sur-Orge, taxi Morangis, taxi Chilly-Mazarin, taxi Essonne, taxi Orly, taxi gare et trajets toutes distances.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Transport de personnes</h3>
+            <p>Courses locales, déplacements privés, rendez-vous et besoins réguliers avec un service ponctuel, confortable et fiable.</p>
+          </article>
+          <article class="card">
+            <h3>Transferts gares & aéroports</h3>
+            <p>Massy TGV, Gare de Lyon, Montparnasse, Orly, Roissy et toutes destinations selon vos besoins.</p>
+          </article>
+          <article class="card">
+            <h3>Hôpitaux & consultations</h3>
+            <p>Trajets vers les hôpitaux, centres médicaux, cliniques et cabinets en Essonne, à Paris et en Île-de-France.</p>
+          </article>
+          <article class="card">
+            <h3>Transport de colis et de plis</h3>
+            <p>Documents, enveloppes, plis urgents et petits colis pour particuliers, professionnels et entreprises.</p>
+          </article>
+          <article class="card">
+            <h3>Toutes distances</h3>
+            <p>Déplacements en Essonne, à Paris, dans toute l’Île-de-France et sur les longues distances avec réservation simple.</p>
+          </article>
+          <article class="card">
+            <h3>Plusieurs véhicules disponibles</h3>
+            <p>Une organisation souple selon le trajet, le nombre de passagers, les bagages et la disponibilité.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zones">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Zones desservies autour de Savigny-sur-Orge</h2>
+          <p>Pour renforcer la présence locale sans surcharger la page, les principales communes et destinations de proximité sont mises en avant de façon naturelle.</p>
+        </div>
+
+        <div class="areas">
+          <article class="card">
+            <h3>Communes desservies régulièrement</h3>
+            <ul class="area-list">
+              <li>Taxi Savigny-sur-Orge</li>
+              <li>Taxi Morangis</li>
+              <li>Taxi Chilly-Mazarin</li>
+              <li>Taxi Juvisy-sur-Orge</li>
+              <li>Taxi Athis-Mons</li>
+              <li>Taxi Viry-Châtillon</li>
+              <li>Taxi Paray-Vieille-Poste</li>
+              <li>Taxi Longjumeau</li>
+              <li>Taxi Draveil</li>
+              <li>Taxi Épinay-sur-Orge</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Destinations fréquentes</h3>
+            <ul class="area-list">
+              <li>Aéroport d’Orly</li>
+              <li>Aéroport Roissy CDG</li>
+              <li>Massy TGV</li>
+              <li>Gare de Lyon</li>
+              <li>Gare Montparnasse</li>
+              <li>Gare du Nord</li>
+              <li>Hôpitaux et cliniques</li>
+              <li>Paris intra-muros</li>
+              <li>Essonne</li>
+              <li>Toute l’Île-de-France</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Ce que les clients retiennent de RGS Taxi</h2>
+          <p>Une section avis dynamique renforce la confiance et met en avant la fiche Google accessible directement depuis le site.</p>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+          <span class="google-chip">Google • 5,0/5</span>
+          <a class="btn btn-secondary" href="https://share.google/6giEUYR3tADGOdOhG" target="_blank" rel="noopener">Ouvrir la fiche Google</a>
+        </div>
+
+        <div class="review-wrap" aria-label="Avis clients">
+          <div class="review-track">
+            <article class="review-card">
+              <div class="review-top"><strong>Service ponctuel</strong><span class="stars">★★★★★</span></div>
+              <p>Transport sérieux, prise en charge rassurante et service apprécié pour les trajets importants, les transferts et les réservations rapides.</p>
+              <span class="muted">Avis Google • RGS Taxi</span>
+            </article>
+            <article class="review-card">
+              <div class="review-top"><strong>Réservation facile</strong><span class="stars">★★★★★</span></div>
+              <p>Contact simple, échange fluide et départs organisés rapidement pour les trajets en Essonne, vers Paris, les gares et les aéroports.</p>
+              <span class="muted">Avis Google • RGS Taxi</span>
+            </article>
+            <article class="review-card">
+              <div class="review-top"><strong>Professionnel & fiable</strong><span class="stars">★★★★★</span></div>
+              <p>Une image propre, un service professionnel et une expérience rassurante pour particuliers comme pour professionnels.</p>
+              <span class="muted">Avis Google • RGS Taxi</span>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <div class="review-top"><strong>Service ponctuel</strong><span class="stars">★★★★★</span></div>
+              <p>Transport sérieux, prise en charge rassurante et service apprécié pour les trajets importants, les transferts et les réservations rapides.</p>
+              <span class="muted">Avis Google • RGS Taxi</span>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <div class="review-top"><strong>Réservation facile</strong><span class="stars">★★★★★</span></div>
+              <p>Contact simple, échange fluide et départs organisés rapidement pour les trajets en Essonne, vers Paris, les gares et les aéroports.</p>
+              <span class="muted">Avis Google • RGS Taxi</span>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <div class="review-top"><strong>Professionnel & fiable</strong><span class="stars">★★★★★</span></div>
+              <p>Une image propre, un service professionnel et une expérience rassurante pour particuliers comme pour professionnels.</p>
+              <span class="muted">Avis Google • RGS Taxi</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Réserver en quelques secondes</h2>
+          <p>Le site est pensé pour convertir vite sur mobile : comprendre, appeler, envoyer un WhatsApp ou faire une demande en quelques clics.</p>
+        </div>
+
+        <div class="process">
+          <article class="card">
+            <div class="step-num">01</div>
+            <h3>Vous contactez RGS Taxi</h3>
+            <p>Par téléphone ou sur WhatsApp avec le lieu de départ, la destination, l’horaire et le nombre de passagers.</p>
+          </article>
+          <article class="card">
+            <div class="step-num">02</div>
+            <h3>Le trajet est organisé</h3>
+            <p>Selon votre besoin : course locale, aéroport, gare, hôpital, déplacement professionnel ou transport urgent.</p>
+          </article>
+          <article class="card">
+            <div class="step-num">03</div>
+            <h3>Départ en toute sérénité</h3>
+            <p>Vous profitez d’un service joignable, sérieux et adapté aux trajets en Essonne, à Paris et en Île-de-France.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <article class="card">
+          <h2 style="margin-top:0;font-size:2rem;line-height:1.05;">Coordonnées & demande rapide</h2>
+          <ul class="service-list">
+            <li><strong>Téléphone :</strong> <a href="tel:+33633339423">06 33 33 94 23</a></li>
+            <li><strong>WhatsApp :</strong> <a href="https://wa.me/33633339423?text=Bonjour%20RGS%20Taxi%2C%20je%20souhaite%20r%C3%A9server%20une%20course." target="_blank" rel="noopener">Contacter directement</a></li>
+            <li><strong>Adresse :</strong> 45 Rue des Cailles, 91600 Savigny-sur-Orge</li>
+            <li><strong>Zone d’intervention :</strong> Essonne, Paris, Île-de-France</li>
+            <li><strong>Activité :</strong> transport de personnes, plis, colis et trajets toute distance</li>
+          </ul>
+
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/deabreue9@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nouvelle demande depuis le site RGS Taxi" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Nom</label>
+                <input id="name" name="Nom" type="text" placeholder="Votre nom" required />
+              </div>
+              <div class="field">
+                <label for="phone">Téléphone</label>
+                <input id="phone" name="Téléphone" type="tel" placeholder="06 00 00 00 00" required />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="pickup">Adresse de départ</label>
+                <input id="pickup" name="Départ" type="text" placeholder="Adresse de départ" required />
+              </div>
+              <div class="field">
+                <label for="destination">Destination</label>
+                <input id="destination" name="Destination" type="text" placeholder="Adresse d’arrivée" required />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="date">Date</label>
+                <input id="date" name="Date" type="date" />
+              </div>
+              <div class="field">
+                <label for="time">Heure</label>
+                <input id="time" name="Heure" type="time" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" placeholder="Nombre de passagers, bagages, demande particulière..."></textarea>
+            </div>
+
+            <p class="form-note">Pour une réponse immédiate, le plus rapide reste l’appel ou WhatsApp.</p>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+              <a class="btn btn-secondary" href="tel:+33633339423">Appeler</a>
+              <a class="btn btn-whatsapp" href="https://wa.me/33633339423?text=Bonjour%20RGS%20Taxi%2C%20je%20souhaite%20r%C3%A9server%20une%20course." target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+
+            <div class="success-box" id="successBox">Votre demande est en cours d’envoi. Pense à valider l’adresse email FormSubmit lors du premier test.</div>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3 style="margin-top:0;">Localisation & présence locale</h3>
+          <p class="muted">Une carte aide à rassurer, à situer le service rapidement et renforce la lecture locale du site sur mobile comme sur desktop.</p>
+          <iframe class="map-frame" title="Carte RGS Taxi Savigny-sur-Orge" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=45%20Rue%20des%20Cailles%2091600%20Savigny-sur-Orge&z=14&output=embed"></iframe>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Questions fréquentes</h2>
+          <p>Une FAQ locale aide les visiteurs à trouver rapidement la bonne information tout en renforçant la pertinence de la page.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <details>
+              <summary>RGS Taxi intervient-il à Savigny-sur-Orge, Morangis et Chilly-Mazarin ?</summary>
+              <p>Oui. RGS Taxi intervient à Savigny-sur-Orge, Morangis, Chilly-Mazarin et dans les communes voisines de l’Essonne, avec possibilité de trajets vers Paris et toute l’Île-de-France.</p>
+            </details>
+          </div>
+          <div class="faq-item">
+            <details>
+              <summary>Pouvez-vous assurer un transfert vers un aéroport ou une gare ?</summary>
+              <p>Oui. Le service couvre les transferts vers Orly, Roissy, Massy TGV ainsi que les principales gares parisiennes avec réservation conseillée pour garantir la disponibilité.</p>
+            </details>
+          </div>
+          <div class="faq-item">
+            <details>
+              <summary>Le transport de colis et de plis est-il possible ?</summary>
+              <p>Oui. RGS Taxi propose aussi le transport de plis, documents, dossiers et petits colis urgents pour les particuliers comme pour les professionnels.</p>
+            </details>
+          </div>
+          <div class="faq-item">
+            <details>
+              <summary>Comment réserver rapidement ?</summary>
+              <p>Le plus simple est d’appeler directement ou d’envoyer un message WhatsApp avec le lieu de départ, la destination, l’horaire souhaité et le nombre de passagers.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-bar">
+      <span>© 2026 RGS Taxi — Taxi à Savigny-sur-Orge, Morangis, Chilly-Mazarin, Essonne et Île-de-France.</span>
+      <span>Réservation au 06 33 33 94 23 • WhatsApp disponible</span>
+    </div>
+  </footer>
+
+  <div class="mobile-cta-bar" aria-label="Actions rapides mobile">
+    <a class="btn btn-primary" href="tel:+33633339423">Appeler</a>
+    <a class="btn btn-whatsapp" href="https://wa.me/33633339423?text=Bonjour%20RGS%20Taxi%2C%20je%20souhaite%20r%C3%A9server%20une%20course." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/33633339423?text=Bonjour%20RGS%20Taxi%2C%20je%20souhaite%20r%C3%A9server%20une%20course." target="_blank" rel="noopener" aria-label="Contacter RGS Taxi sur WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.29c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.07-.29-.15-1.21-.44-2.31-1.41-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.44.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.87-2.11-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.49.07-.74.36-.26.29-.97.95-.97 2.31 0 1.36.99 2.67 1.12 2.86.14.19 1.95 2.97 4.73 4.16.66.29 1.18.46 1.58.59.66.21 1.27.18 1.74.11.53-.08 1.7-.69 1.94-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.34M16.03 4.8c-6.13 0-11.1 4.95-11.1 11.05 0 1.95.51 3.86 1.49 5.55L4 28l6.8-2.22a11.13 11.13 0 0 0 5.23 1.33h.01c6.13 0 11.1-4.95 11.1-11.06 0-2.96-1.16-5.74-3.26-7.83A11.02 11.02 0 0 0 16.03 4.8m0 20.44h-.01a9.24 9.24 0 0 1-4.71-1.29l-.34-.2-4.03 1.32 1.32-3.93-.22-.36a9.14 9.14 0 0 1-1.41-4.89c0-5.05 4.14-9.16 9.24-9.16 2.44 0 4.73.94 6.45 2.66a9.08 9.08 0 0 1 2.68 6.49c0 5.05-4.15 9.16-9.23 9.16"></path>
+    </svg>
+  </a>
+
+  <script>
+    (function () {
+      const words = [
+        'à Savigny-sur-Orge',
+        'en Essonne',
+        'vers Orly et Roissy',
+        'pour gares et hôpitaux',
+        'dans toute l’Île-de-France'
+      ];
+      const el = document.getElementById('typewriter');
+      if (!el) return;
+
+      const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
+      let wordIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+      let timer;
+
+      function loop() {
+        const current = words[wordIndex];
+
+        if (isMobile()) {
+          el.textContent = current;
+          wordIndex = (wordIndex + 1) % words.length;
+          timer = setTimeout(loop, 1800);
+          return;
+        }
+
+        el.textContent = deleting
+          ? current.slice(0, charIndex--)
+          : current.slice(0, charIndex++);
+
+        let delay = deleting ? 40 : 70;
+
+        if (!deleting && charIndex === current.length + 1) {
+          deleting = true;
+          delay = 1200;
+        } else if (deleting && charIndex < 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          delay = 220;
+        }
+
+        timer = setTimeout(loop, delay);
+      }
+
+      loop();
+      window.addEventListener('beforeunload', function () { clearTimeout(timer); });
+    })();
+
+    (function () {
+      const form = document.getElementById('contactForm');
+      const successBox = document.getElementById('successBox');
+      if (!form || !successBox) return;
+      form.addEventListener('submit', function () {
+        successBox.style.display = 'block';
+      });
+    })();
+  </script>
+</body>
+</html>
